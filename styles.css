@@ -16,6 +16,14 @@
 	color: white;
 }
 
+.source a:link{
+	color: #a0a0a0;
+}
+
+.ancre-contenu a:link{
+	color: #a0a0a0;
+}
+
 .footer-menu a:visited {
     color: #c0c0c0;
 }
@@ -26,6 +34,14 @@
 
 .box a:visited{
 	color: white;
+}
+
+.source a:visited{
+	color: #c0c0c0;
+}
+
+.ancre-contenu a:visited{
+	color: #c0c0c0;
 }
 
 .footer-menu a:hover {
@@ -39,6 +55,15 @@
 .box a:hover{
 	color: white;
 }
+
+.source a:hover{
+	color: #d0d0d0;
+}
+
+.ancre-contenu a:hover{
+	color: #d0d0d0;
+}
+
 
 /* CORPS */
 body{
@@ -296,6 +321,11 @@ nav .current{
 
 .fleche{
 	width: 50px;
+  transition: transform 0.6s;
+}
+
+.fleche:hover {
+    transform: scale(1.4); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 /* miniatures de la page d'accueil */
@@ -315,10 +345,15 @@ nav .current{
 	padding-right: 5%;
 	text-align: center;
 	color: white;
+  transition: transform 0.8s;
 }
 
 #boxes .box img{
 	width: 200px;
+}
+
+#boxes .box:hover{
+	transform: scale(1.1);
 }
 
 #boxes .box h3{
@@ -578,6 +613,12 @@ footer{
 	width: 50px;
 	display: inline-block;
 	color: white;
+}
+
+.source{
+	color: white;
+	text-align: left;
+	margin-bottom: 2%;
 }
 
 /* responsive du contenu des pages */
