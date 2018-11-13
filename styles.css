@@ -3,8 +3,8 @@
 	padding: 0;
   text-decoration: none;
 }
- /* la couleur des liens */
 
+ /* couleurs des liens */
 .footer-menu a:link {
     color: #a0a0a0;
 }
@@ -41,7 +41,6 @@
 }
 
 /* CORPS */
-
 body{
 	margin: 0;
 	font-family: arial, sans-serif;
@@ -55,15 +54,12 @@ img {
 }
 
 /* HEADER*/
-
 .logo{
 	width: 150px;
 	height: 150px;
-	margin-top: 1em;
 }
 
-/* BAR DE NAVIGATION RESPONSIVE */
-
+/* BARRE DE NAVIGATION RESPONSIVE */
 header{
 	background-color: #202020;
 	color: white;
@@ -75,27 +71,24 @@ header{
 
 }
 
-/* ENLEVE LE CARRE POUR COCHER */
-
+/* enleve le carré pour cocher */
 .nav-toggle{
 	display: none;
 }
 
-/* DEPLACE LE MENU A GAUCHE */
-
+/* deplace le menu à gauche */
 .nav-toggle-label{
 	position: absolute;
 	top:0;
 	left: 0;
 	margin-left: 1em;
 	height: 100%;
-	/* REMPLIR TOUT L'ESPACE */
+	/* remplit tout l'espace */
 	display: flex;
 	align-items: center;
 }
 
-/* ICONE DU MENU LES 3 BARRES */
-
+/* icone menu */
 .nav-toggle-label span,
 .nav-toggle-label span::before,
 .nav-toggle-label span::after{
@@ -127,7 +120,7 @@ nav{
 	top: 100%;
 	left: 0;
 	width: 100%;
-	/* ANIMATION DEROULANT */
+	/* animation déroulante */
 	transform: scale(1, 0);
 	transform-origin: top;
 	transition: transform 300ms ease-in-out;
@@ -151,7 +144,7 @@ nav a{
 	font-size: 1.2rem;
 	text-transform: uppercase;
 	opacity: 0;
-	/* ANIMATION OPACITE */
+	/* animation opacité */
 	transition: opacity 150ms ease-in-out;
 }
 
@@ -172,8 +165,7 @@ nav .current{
 	transition: opacity 250ms ease-in-out 250ms;
 }
 
-/* enleve le menu pour le téléphone quand c'est supérieur à 800 px */
-
+/* enleve le menu telephone lorsque > 800px */
 @media screen and (min-width: 800px){
 
 	.nav-toggle-label{
@@ -225,8 +217,8 @@ nav .current{
 		height: 5px;
 		background: #a0a0a0;
 		position: absolute;
-		/* CREER LA BARRE AU DESSUS DES RUBRIQUES */
-		top: -0.75em;
+		/* creer la barre en dessous des rubriques */
+		bottom: -0.75em;
 		left: 0;
 		right: 0;
 		transform: scale(0, 1);
@@ -241,14 +233,13 @@ nav .current{
 }
 
 /* ACCUEIL */
-
 .container{
 	width: 100%;
 	margin: 0 auto;
 	background-color: black;
 }
 
-.home-hero {
+#home-hero {
 	background-image: url(img/home-hero.jpg);
 	padding: 10em 0;
 	width: 100%;
@@ -273,23 +264,16 @@ nav .current{
 	font-size: 0.5em;
 }
 
-/* RESPONSIVE HERO IMAGE */
-
+/* responsive des heros images et du contenu */
 @media (min-width: 800PX) {
 
 	.title{
 		font-size: 2.5rem;
   	font-family: 'Hind Madurai', sans-serif;
 	}
-	.home-hero{
-		width: 100%;
-	}
-	.home-spoutnik{
-		width: 1200px;
-	}
+
 	.contenu{
 		text-align: center;
-		width: 1200px;
 	}
 }
 
@@ -300,28 +284,25 @@ nav .current{
 	margin-right: auto;
 }
 
-/* ANCRE */
-
+/* ancre */
 .ancre{
 	color: white;
-	margin-top: 15%;
 	background-color: black;
 	width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
 	display: inline-block;
+	margin-top: 10%;
+	margin-bottom: 10%;
 }
 
 .fleche{
 	width: 50px;
 }
 
-/* Les miniatures */
-
+/* miniatures de la page d'accueil */
 #boxes{
 	display: inline-block;
-	margin-left: 10%;
-	margin-top: 20%;
+	margin-left: auto;
+	margin-right: auto;
 
 }
 
@@ -329,8 +310,9 @@ nav .current{
 	float: left;
 	margin-right: auto;
 	margin-left: auto;
-	width: 15%;
-	padding: 3%;
+	width: 25%;
+	padding-left: 5%;
+	padding-right: 5%;
 	text-align: center;
 	color: white;
 }
@@ -343,14 +325,16 @@ nav .current{
 	font-size: 30px;
 	margin-top: 15px;
   font-family: 'Hind Madurai', sans-serif;
+	text-align: center;
 }
 
 #boxes .box p{
 	margin-top: 15px;
   font-family: 'Hind Madurai', sans-serif;
+	text-align: center;
 }
-/* media queries pour les miniatures de la page d'accueil */
 
+/* responsive des miniatures et de la page d'accueil */
 @media (max-width: 800px) {
 
 	#boxes .box{
@@ -366,20 +350,15 @@ nav .current{
 }
 
 	.fond{
-		width: 50%;
+		width: 70%;
 	}
 
 	.ancre{
 		width: 100%;
 	}
-
-	.fleche{
-		width: 50px;
-	}
 }
 
 /* FOOTER */
-
 footer{
 	width: 100%;
 	height: auto;
@@ -388,8 +367,7 @@ footer{
 	padding: 20px 0px;
 }
 
-/* BOUTONS RESEAUX SOCIAUX */
-
+/* les boutons des réseaux sociaux */
 .footer-social-icons{
 	width: 100%;
 	height: auto;
@@ -444,12 +422,16 @@ footer{
   color: white;
 }
 
+.fa-github{
+  background: white;
+  color: black;
+}
+
 .fa:hover{
     opacity: 0.7;
 }
 
-/* MENU DE NAVIGATION FOOTER */
-
+/* menu de navigation du footer */
 .footer-menu{
 	width: 100%;
 	height: auto;
@@ -470,9 +452,10 @@ footer{
 
 .footer-menu ul li a{
 	font-size: 17px;
+	font-weight: 600;
 }
-/* REALISATION FOOTER */
 
+/* la partie "réalisation" du footer */
 .footer-bottom{
 	width: 100%;
 	height: auto;
@@ -483,8 +466,10 @@ footer{
 
 .footer-bottom p{
 	color: white;
-	font-size: 15px;
+	font-size: 16px;
 	text-align: center;
+	padding: 1%;
+  font-family: 'Hind Madurai', sans-serif;
 }
 
 .footer-iut{
@@ -498,9 +483,9 @@ footer{
 	width: 5%;
 }
 
-/*DEUXIEME PAGE -------------------------------------------------------------------*/
+/* DEUXIEME PAGE */
 
-.home-spoutnik{
+#home-spoutnik{
 	background-image: url(img/hero-spoutnik.jpg);
 	padding: 10em 0;
 	width: 100%;
@@ -536,9 +521,20 @@ footer{
 	padding-right: 2%;
 }
 
+.box h2{
+	color: white;
+	padding: 2%;
+}
+
+.box h5{
+	color: white;
+	text-align: left;
+	text-indent: 5%;
+}
 .box p {
 	color: white;
 	text-align: justify;
+	text-indent: 5%;
 }
 
 .box .photo2 {
@@ -565,23 +561,35 @@ footer{
 	padding-left: 2%;
 }
 
-/* RESPONSIVE CONTENU */
+/* ancre des contenus */
+.ancre-contenu {
+	display: inline-block;
+	margin-bottom: 5%;
+	float: right;
+}
 
+.retourhaut {
+	color: white;
+	display: inline-block;
+	font-weight: 600;
+}
+
+.fleche2 {
+	width: 50px;
+	display: inline-block;
+	color: white;
+}
+
+/* responsive du contenu des pages */
 @media (max-width: 800px) {
 
 	.contenu{
 		width: 100%;
 	}
-
-	.box{
-		margin-top: 5%;
-		margin-bottom: 5%;
-	}
 }
 
 /* TROISIEME PAGE */
-
-.home-apollo8{
+#home-apollo8{
 	background-image: url(img/hero-apollo8.jpg);
 	padding: 10em 0;
 	width: 100%;
@@ -593,9 +601,16 @@ footer{
 	box-shadow: 0 0 25px 5px black;
 }
 
-/* QUATRIEME PAGE */
+.box .photo2a8 {
+	float: right;
+	width: 100%;
+	max-width: 300px;
+	height: auto;
+	padding-left: 2%;
+}
 
-.home-apollo11{
+/* QUATRIEME PAGE */
+#home-apollo11{
 	background-image: url(img/hero-apollo11.jpg);
 	padding: 10em 0;
 	width: 100%;
@@ -608,9 +623,8 @@ footer{
 }
 
 /* CINQUIEME PAGE */
-
-.home-dearmoon{
-	background-image: url(img/hero-dearmoon.png);
+#home-dearmoon{
+	background-image: url(img/hero-dearmoon.jpg);
 	padding: 10em 0;
 	width: 100%;
 	margin-top: 6em;
@@ -619,4 +633,21 @@ footer{
 	background-size: cover;
 	background-position: center;
 	box-shadow: 0 0 25px 5px black;
+}
+
+/* les vidéos */
+.video{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+	margin-bottom: 5%;
+}
+
+.video iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
