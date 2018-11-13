@@ -1,0 +1,622 @@
+*{
+	margin: 0;
+	padding: 0;
+  text-decoration: none;
+}
+ /* la couleur des liens */
+
+.footer-menu a:link {
+    color: #a0a0a0;
+}
+
+ .iut a:link {
+    color: white;
+}
+.box a:link{
+	color: white;
+}
+
+.footer-menu a:visited {
+    color: #c0c0c0;
+}
+
+.iut a:visited {
+    color: #c0c0c0;
+}
+
+.box a:visited{
+	color: white;
+}
+
+.footer-menu a:hover {
+    color: #d0d0d0;
+}
+
+.iut a:hover {
+    color: #d0d0d0;
+}
+
+.box a:hover{
+	color: white;
+}
+
+/* CORPS */
+
+body{
+	margin: 0;
+	font-family: arial, sans-serif;
+	text-align: center;
+	background-image: url(img/background.jpg);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* HEADER*/
+
+.logo{
+	width: 150px;
+	height: 150px;
+	margin-top: 1em;
+}
+
+/* BAR DE NAVIGATION RESPONSIVE */
+
+header{
+	background-color: #202020;
+	color: white;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	box-shadow: 0 0 25px 5px black;
+
+}
+
+/* ENLEVE LE CARRE POUR COCHER */
+
+.nav-toggle{
+	display: none;
+}
+
+/* DEPLACE LE MENU A GAUCHE */
+
+.nav-toggle-label{
+	position: absolute;
+	top:0;
+	left: 0;
+	margin-left: 1em;
+	height: 100%;
+	/* REMPLIR TOUT L'ESPACE */
+	display: flex;
+	align-items: center;
+}
+
+/* ICONE DU MENU LES 3 BARRES */
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+	display: block;
+	background: white;
+	height: 2px;
+	width: 2em;
+	border-radius: 2px;
+	position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+	content: '';
+	position: absolute;
+}
+
+.nav-toggle-label span::before{
+	bottom: 7px;
+}
+
+.nav-toggle-label span::after{
+	top: 7px;
+}
+
+nav{
+	position: absolute;
+	text-align: left;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	/* ANIMATION DEROULANT */
+	transform: scale(1, 0);
+	transform-origin: top;
+	transition: transform 300ms ease-in-out;
+	background-color: #202020;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav li{
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
+
+nav a{
+	color: #a0a0a0;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	opacity: 0;
+	/* ANIMATION OPACITE */
+	transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover{
+	color: #d0d0d0;
+}
+
+nav .current{
+	color: #353535;
+}
+/* ~ lit nav-toggle et nav, pour faire le menu déroulant */
+.nav-toggle:checked ~ nav{
+	transform: scale(1,1);
+}
+
+.nav-toggle:checked ~nav a{
+	opacity: 1;
+	transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* enleve le menu pour le téléphone quand c'est supérieur à 800 px */
+
+@media screen and (min-width: 800px){
+
+	.nav-toggle-label{
+		display: none;
+	}
+
+	header{
+		display: grid;
+		/* sépare le header et met le logo à gauche */
+		grid-template-columns: 1fr auto minmax(700px, 5fr) 1fr;
+		position: fixed;
+		box-shadow: 0 0 25px 5px black;
+	}
+
+	#logo{
+		/* le logo part se trouve à la colonne 2 */
+		grid-column: 2 / 3;
+		position: relative;
+		width: 200px;
+		height: 100px;
+	}
+
+	/* le menu se trouve à la colonne 3 */
+	nav{
+		all: unset;
+		grid-column: 3 / 4;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	nav ul{
+		display: flex;
+	}
+
+	nav li{
+		margin-left: 3em;
+		margin-bottom: 0;
+	}
+
+	nav a {
+		opacity: 1;
+		position: relative;
+	}
+
+	nav a::before{
+		content: "";
+		display: block;
+		height: 5px;
+		background: #a0a0a0;
+		position: absolute;
+		/* CREER LA BARRE AU DESSUS DES RUBRIQUES */
+		top: -0.75em;
+		left: 0;
+		right: 0;
+		transform: scale(0, 1);
+		transition: transform ease-in-out 250ms;
+	}
+	nav a:hover:before{
+		transform: scale(1,1);
+	}
+	nav .current{
+		color: #505050;
+	}
+}
+
+/* ACCUEIL */
+
+.container{
+	width: 100%;
+	margin: 0 auto;
+	background-color: black;
+}
+
+.home-hero {
+	background-image: url(img/home-hero.jpg);
+	padding: 10em 0;
+	width: 100%;
+	height: 100%;
+	margin-top: 6.2em;
+	display: inline-block;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0 0 25px 5px black;
+
+}
+
+.title{
+	font-size: 2.5em;
+	color: white;
+  font-family: 'Hind Madurai', sans-serif;
+}
+
+.title span{
+	display: block;
+	font-weight: 300;
+	font-size: 0.5em;
+}
+
+/* RESPONSIVE HERO IMAGE */
+
+@media (min-width: 800PX) {
+
+	.title{
+		font-size: 2.5rem;
+  	font-family: 'Hind Madurai', sans-serif;
+	}
+	.home-hero{
+		width: 100%;
+	}
+	.home-spoutnik{
+		width: 1200px;
+	}
+	.contenu{
+		text-align: center;
+		width: 1200px;
+	}
+}
+
+.fond{
+	width: 1200px;
+	background-color: rgba(0, 0, 0, 0.75);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ANCRE */
+
+.ancre{
+	color: white;
+	margin-top: 15%;
+	background-color: black;
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
+}
+
+.fleche{
+	width: 50px;
+}
+
+/* Les miniatures */
+
+#boxes{
+	display: inline-block;
+	margin-left: 10%;
+	margin-top: 20%;
+
+}
+
+#boxes .box{
+	float: left;
+	margin-right: auto;
+	margin-left: auto;
+	width: 15%;
+	padding: 3%;
+	text-align: center;
+	color: white;
+}
+
+#boxes .box img{
+	width: 200px;
+}
+
+#boxes .box h3{
+	font-size: 30px;
+	margin-top: 15px;
+  font-family: 'Hind Madurai', sans-serif;
+}
+
+#boxes .box p{
+	margin-top: 15px;
+  font-family: 'Hind Madurai', sans-serif;
+}
+/* media queries pour les miniatures de la page d'accueil */
+
+@media (max-width: 800px) {
+
+	#boxes .box{
+		float: left;
+		text-align: center;
+		width: 100%;
+		display: block;
+	}
+
+	#boxes .box img{
+		width: 50%;
+		height: auto;
+}
+
+	.fond{
+		width: 50%;
+	}
+
+	.ancre{
+		width: 100%;
+	}
+
+	.fleche{
+		width: 50px;
+	}
+}
+
+/* FOOTER */
+
+footer{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	background: #252525;
+	padding: 20px 0px;
+}
+
+/* BOUTONS RESEAUX SOCIAUX */
+
+.footer-social-icons{
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+
+.footer-social-icons ul{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+.footer-social-icons ul li{
+	display: inline-block;
+}
+
+.footer-social-icons ul li a {
+	color: white;
+	font-size: 25px;
+	display: block;
+}
+
+.footer-social-icons ul li a i{
+	line-height: 50px;
+}
+
+.fa {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0px 10px;
+	border-radius: 100%;
+}
+
+.fa-facebook{
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter{
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube{
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram{
+  background: #125688;
+  color: white;
+}
+
+.fa:hover{
+    opacity: 0.7;
+}
+
+/* MENU DE NAVIGATION FOOTER */
+
+.footer-menu{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.footer-menu ul{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+.footer-menu ul li{
+	display: inline-block;
+	margin: 0px 15px;
+}
+
+.footer-menu ul li a{
+	font-size: 17px;
+}
+/* REALISATION FOOTER */
+
+.footer-bottom{
+	width: 100%;
+	height: auto;
+	background: #202020;
+	text-align: center;
+
+}
+
+.footer-bottom p{
+	color: white;
+	font-size: 15px;
+	text-align: center;
+}
+
+.footer-iut{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	background: #202020;
+}
+
+.footer-iut img{
+	width: 5%;
+}
+
+/*DEUXIEME PAGE -------------------------------------------------------------------*/
+
+.home-spoutnik{
+	background-image: url(img/hero-spoutnik.jpg);
+	padding: 10em 0;
+	width: 100%;
+	margin-top: 6em;
+	height: 100%;
+	display: inline-block;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0 0 25px 5px black;
+}
+
+.contenu{
+	width: 1200px;
+	height: auto;
+	font-size: 18px;
+	display: inline-block;
+}
+
+.box{
+	margin-top: 5%;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 5%;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+.box .photo1{
+	float: left;
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	padding-right: 2%;
+}
+
+.box p {
+	color: white;
+	text-align: justify;
+}
+
+.box .photo2 {
+	float: right;
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	padding-left: 2%;
+}
+
+.box .photo3 {
+	float: left;
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	padding-right: 2%;
+}
+
+.box .photo4 {
+	float: right;
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	padding-left: 2%;
+}
+
+/* RESPONSIVE CONTENU */
+
+@media (max-width: 800px) {
+
+	.contenu{
+		width: 100%;
+	}
+
+	.box{
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+}
+
+/* TROISIEME PAGE */
+
+.home-apollo8{
+	background-image: url(img/hero-apollo8.jpg);
+	padding: 10em 0;
+	width: 100%;
+	margin-top: 6em;
+	height: 100%;
+	display: inline-block;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0 0 25px 5px black;
+}
+
+/* QUATRIEME PAGE */
+
+.home-apollo11{
+	background-image: url(img/hero-apollo11.jpg);
+	padding: 10em 0;
+	width: 100%;
+	margin-top: 6em;
+	height: 100%;
+	display: inline-block;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0 0 25px 5px black;
+}
+
+/* CINQUIEME PAGE */
+
+.home-dearmoon{
+	background-image: url(img/hero-dearmoon.png);
+	padding: 10em 0;
+	width: 100%;
+	margin-top: 6em;
+	height: 100%;
+	display: inline-block;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0 0 25px 5px black;
+}
