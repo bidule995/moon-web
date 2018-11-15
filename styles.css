@@ -601,18 +601,23 @@ footer{
 	display: inline-block;
 	margin-bottom: 5%;
 	float: right;
+	color: #a0a0a0;
 }
 
 .retourhaut {
-	color: white;
+	color: #a0a0a0;
 	display: inline-block;
 	font-weight: 600;
+}
+
+.retourhaut p:hover{
+	color: #d0d0d0;
 }
 
 .fleche2 {
 	width: 50px;
 	display: inline-block;
-	color: white;
+	color: #a0a0a0;
 }
 
 .source{
@@ -661,6 +666,22 @@ footer{
 	background-size: cover;
 	background-position: center;
 	box-shadow: 0 0 25px 5px black;
+}
+
+.box h3{
+	color: white;
+	text-align: justify;
+}
+
+td{
+	border: 1px solid white;
+	padding: 1em;
+	color: white;
+}
+
+table{
+	border-collapse: collapse;
+	margin-top: 3%;
 }
 
 /* CINQUIEME PAGE */
