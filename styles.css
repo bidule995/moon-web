@@ -51,8 +51,7 @@ img {
 /* Ancre */
 .ancre {
   color: white;
-  background-color: black;
-  width: 1200px;
+  width: 100%;
   display: inline-block;
   margin-top: 10%;
   margin-bottom: 10%;
