@@ -5,7 +5,7 @@
 }
 
 /* Couleurs des liens */
-.footer-menu a:link, .source a:link, .ancre-contenu a:link {
+.footer-menu a:link, .source a:link, .ancre-contenu a:link, .ancre-contenu p:hover h1:hover {
   color: #a0a0a0;
 }
 
@@ -13,11 +13,11 @@
   color: white;
 }
 
-.footer-menu a:visited, .iut a:visited, .source a:visited, .ancre-contenu a:visited {
+.footer-menu a:visited, .iut a:visited, .source a:visited, .ancre-contenu p:visited, .ancre-contenu h1:visited {
   color: #c0c0c0;
 }
 
-.footer-menu a:hover, .iut a:hover, .source a:hover, .ancre-contenu a:hover {
+.footer-menu a:hover, .iut a:hover, .source a:hover, .ancre-contenu p:hover, .ancre-contenu h1:hover {
   color: #d0d0d0;
 }
 
@@ -38,6 +38,50 @@ img {
 .logo {
   width: 150px;
   height: 150px;
+}
+
+.fond {
+  width: 1200px;
+  background-color: rgba(0, 0, 0, 0.75);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ancre */
+.ancre {
+  color: white;
+  background-color: black;
+  width: 1200px;
+  display: inline-block;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.fleche {
+  width: 50px;
+  transition: transform 0.6s;
+}
+
+.fleche:hover {
+  transform: scale(1.4);
+}
+
+/* Ancre des contenus */
+.ancre-contenu {
+  display: inline-block;
+  margin-bottom: 5%;
+  float: right;
+  color: #a0a0a0;
+}
+
+.retourhaut {
+  color: #a0a0a0;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.retourhaut p:hover {
+  color: #d0d0d0;
 }
 
 /* BARRE DE NAVIGATION RESPONSIVE */
@@ -257,32 +301,6 @@ nav .current {
   }
 }
 
-.fond {
-  width: 1200px;
-  background-color: rgba(0, 0, 0, 0.75);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Ancre */
-.ancre {
-  color: white;
-  background-color: black;
-  width: 1200px;
-  display: inline-block;
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
-
-.fleche {
-  width: 50px;
-  transition: transform 0.6s;
-}
-
-.fleche:hover {
-  transform: scale(1.4);
-}
-
 /* Miniatures de la page d'accueil */
 #boxes {
   display: inline-block;
@@ -333,7 +351,7 @@ nav .current {
   }
 
   #boxes .box img {
-    width: 50%;
+    width: 30%;
     height: auto;
   }
 
@@ -546,30 +564,6 @@ footer {
   max-width: 400px;
   height: auto;
   padding-left: 2%;
-}
-
-/* Ancre des contenus */
-.ancre-contenu {
-  display: inline-block;
-  margin-bottom: 5%;
-  float: right;
-  color: #a0a0a0;
-}
-
-.retourhaut {
-  color: #a0a0a0;
-  display: inline-block;
-  font-weight: 600;
-}
-
-.retourhaut p:hover {
-  color: #d0d0d0;
-}
-
-.fleche2 {
-  width: 50px;
-  display: inline-block;
-  color: #a0a0a0;
 }
 
 .source {
